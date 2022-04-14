@@ -1,0 +1,42 @@
+{
+  "name": "restfulwebservicesnodeexpress",
+  "version": "1.0.0",
+  "description": "REST webservice node express",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -L index.js",
+    "docker": "docker-compose -f docker-compose.yml up",
+    "docker-build": "docker-compose -f docker-compose.yml build",
+    "postdev": "docker stop mongodb",
+    "lint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samk13/RESTfulWebServicesNodeExpress.git"
+  },
+  "author": "Sam arbid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Samk13/RESTfulWebServicesNodeExpress/issues"
+  },
+  "homepage": "https://github.com/Samk13/RESTfulWebServicesNodeExpress#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": "4000"
+    }
+  }
+}
