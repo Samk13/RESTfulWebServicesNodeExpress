@@ -14,5 +14,6 @@ module.exports = {
     'no-console': 'off',
     'no-underscore-dangle': 'off',
     semi: 'off',
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
 };
