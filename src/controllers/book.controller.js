@@ -45,6 +45,15 @@ const controller = {
 
   update: async (req, res, next) => {
     try {
+    //   const { bookVal } = req
+    //   if (req.body._id) {
+    //     delete req.body._id
+    //   }
+    //   Object.entries(req.body).forEach((item) => {
+    //     const key = item[0]
+    //     const value = item[1]
+    //     bookVal[key] = value
+    //   })
       const book = await Book.findByIdAndUpdate(
         req.params.id,
         req.body,

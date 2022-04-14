@@ -9,6 +9,14 @@ const bookSchema = new Schema({
   read: { type: Boolean },
 })
 
+/**
+ * revalidate on update
+ */
+// bookSchema.pre('findOneAndUpdate', (next) => {
+//   this.options.runValidators = true
+//   next()
+// })
+
 const Book = mongoose.model('Book', bookSchema, 'books')
 
 module.exports = {
