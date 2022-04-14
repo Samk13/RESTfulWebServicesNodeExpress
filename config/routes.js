@@ -3,7 +3,7 @@ const bookRouter = require('../src/routes/book.route')
 const {handleErrorsMiddlewares} = require('../src/middlewares/handle-errors.middleware')
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        res.send('Accommodation API endpoint v1.0!')
+        res.send('Sam API endpoint v1.0!')
     })
 
     app.get('/api/v1', function (req, res) {

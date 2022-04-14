@@ -62,8 +62,7 @@ const controller = {
     delete: async (req, res, next) => {
         // Delete user by id
         try {
-            // const result = await Accommodation.findByIdAndRemove(req.params.id)
-            const result = await Accommodation.deleteAccommodation(
+            const result = await Book.findByIdAndDelete(
                 req.params.id
             )
 
