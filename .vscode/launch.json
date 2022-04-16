@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Docker Node.js Launch",
+            "type": "node",
+            "request": "attach",
+            "remoteRoot": "/app", // where the app is mounted in the container
+            "port": 9229, // port to connect to
+            "address": "localhost", // address to connect to
+            "localRoot": "${workspaceFolder}/", // where the app is mounted on the host
+            "protocol": "inspector", // protocol to use
+            "restart": true, // restart the app on changes
+        }
+    ]
+}
