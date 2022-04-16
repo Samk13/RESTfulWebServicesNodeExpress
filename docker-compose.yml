@@ -9,11 +9,15 @@ services:
     - /app/node_modules
     ports:
       - "4000:4000"
+      - "9229:9229"
     networks:
       - booksAPI
     depends_on:
       - mongodb
-    command: npm run dev
+    command:
+      - npm
+      - run
+      - dev
   mongodb:
     container_name: mongodb
     image: mongo

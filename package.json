@@ -4,10 +4,9 @@
   "description": "REST webservice node express",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -L index.js",
+    "dev": "nodemon -L --inspect=0.0.0.0:9229 index.js",
     "docker": "docker-compose -f docker-compose.yml up",
     "docker-build": "docker-compose -f docker-compose.yml build",
-    "postdev": "docker stop mongodb",
     "lint": "eslint --fix ."
   },
   "repository": {
